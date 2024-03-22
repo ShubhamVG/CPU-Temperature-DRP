@@ -19,7 +19,7 @@ const (
 var (
 	// check your sensors and include it here
 	SENSORS_TO_USE = []string{
-		"k10temp-pci-00c3",
+		"INSERT SENSOR NAME" // like "k10temp-pci-24c3",
 	}
 )
 
