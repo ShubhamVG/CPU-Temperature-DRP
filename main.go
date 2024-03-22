@@ -30,8 +30,8 @@ func waitForCooldown() {
 func main() {
 	clientId := os.Getenv("DISCORD_RICH_PRESENCE_CLIENT_ID")
 
+	// The Discord app is probably not open on the local device.
 	if err := client.Login(clientId); err != nil {
-		fmt.Println("The Discord app is probably not open.")
 		os.Exit(1)
 	}
 
@@ -47,7 +47,6 @@ func main() {
 	})
 
 	if initialActivityErr != nil {
-		fmt.Println("Failed to set the initial activity.")
 		os.Exit(1)
 	}
 
@@ -93,7 +92,6 @@ func main() {
 		err = client.SetActivity(activity)
 
 		if err != nil {
-			fmt.Println("Failed to update CPU temperature.")
 			os.Exit(1)
 		}
 
