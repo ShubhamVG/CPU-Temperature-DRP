@@ -28,10 +28,8 @@ func waitForCooldown() {
 }
 
 func main() {
-	clientId := os.Getenv("DISCORD_RICH_PRESENCE_CLIENT_ID")
-
-	// The Discord app is probably not open on the local device.
-	if err := client.Login(clientId); err != nil {
+	// Checking whether the Discord app is open on the device locally or not.
+	if err := client.Login("1220330296537387108"); err != nil {
 		os.Exit(1)
 	}
 
